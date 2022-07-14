@@ -18,8 +18,8 @@ In the meantime, below is an example of what you can do with just a few lines of
 cards = [str(k) for k in range(2,9)] + ["A","K","Q","J","T"]
 suits = ["o","s"]
 
-card_1 = st.checkbox(cards)
-card_2 = st.checkbox(cards)
+card_1 = st.radio("Pick First Card",cards)
+card_2 = st.radio("Pick Second Card",cards)
 
-suited = st.radio(suits)
+suited = st.radio("Suited",suits)
 
