@@ -55,7 +55,7 @@ st.title(current_hand)
 
 results = get_results(current_hand)
 
-st.dataframe(results,width=1000,height=1000)
+st.table(results,width=1000,height=1000)
 
 
 
