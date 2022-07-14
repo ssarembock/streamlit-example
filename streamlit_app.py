@@ -15,5 +15,11 @@ forums](https://discuss.streamlit.io).
 
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
+cards = [str(k) for k in range(2,9)] + ["A","K","Q","J","T"]
+suits = ["o","s"]
 
+card_1 = st.checkbox(cards)
+card_2 = st.checkbox(cards)
+
+suited = st.radio(suits)
 
