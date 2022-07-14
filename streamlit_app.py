@@ -8,10 +8,10 @@ import pandas as pd
 def get_current_hand(card1,card2,is_suited):
   if card1 == card2:
     result = str(card1)+str(card2)+"o"
+    return result
   else:
     result = sorted(str(card1) + str(card2) + str(is_suited))
-    
-   return result
+    return result
 
 current_hand = None
 """
