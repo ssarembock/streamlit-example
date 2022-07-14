@@ -13,12 +13,7 @@ def get_current_hand(card1,card2,is_suited):
     result = sorted(str(card1) + str(card2) + str(is_suited))
     return result
 
-current_hand = None
-"""
-# {current_hand}
 
-
-""".format(current_hand=current_hand)
 cards = [str(k) for k in range(2,9)] + ["A","K","Q","J","T"]
 suits = ["o","s"]
 
@@ -30,6 +25,12 @@ card_2 = st.sidebar.radio("Pick Second Card",cards)
 suited = st.sidebar.radio("Suited",suits)
 
 current_hand = get_current_hand(card_1,card_2,is_suited)
+
+"""
+# {current_hand}
+
+
+""".format(current_hand=current_hand)
 
 
 
