@@ -26,12 +26,7 @@ suited = st.sidebar.radio("Suited",suits)
 
 current_hand = get_current_hand(card_1,card_2,suited)
 
-"""
-# {current_hand}
-
-
-""".format(current_hand=current_hand)
-
+st.header.write(current_hand)
 
 
 
