@@ -26,7 +26,7 @@ suited = st.sidebar.radio("Suited",suits)
 
 current_hand = get_current_hand(card_1,card_2,suited)
 
-st.header.write(current_hand)
+st.write(current_hand)
 
 
 
