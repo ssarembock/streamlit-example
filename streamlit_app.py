@@ -5,11 +5,18 @@ import pandas as pd
 import streamlit as st
 import pandas as pd
 
+def get_current_hand(card1,card2,is_suited):
+  if card1 == card2:
+    result = str(card1)+str(card2)+"o"
+  else:
+    result = sorted(str(card1) + str(card2) + str(is_suited))
+
+current_hand = None
 """
-# Decision
+# {current_hand}
 
 
-"""
+""".format(current_hand=current_hand)
 cards = [str(k) for k in range(2,9)] + ["A","K","Q","J","T"]
 suits = ["o","s"]
 
@@ -19,4 +26,10 @@ card_1 = st.sidebar.radio("Pick First Card",cards)
 card_2 = st.sidebar.radio("Pick Second Card",cards)
 
 suited = st.sidebar.radio("Suited",suits)
+
+current_hand = get_current_hand(card_1,card_2,is_suited)
+
+
+
+
 
