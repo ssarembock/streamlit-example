@@ -11,7 +11,7 @@ def get_current_hand(card1,card2,is_suited):
     return result
   else:
     result = sorted(str(card1) + str(card2) + str(is_suited))
-    return result
+    return "".join(result)
 
 
 cards = [str(k) for k in range(2,9)] + ["A","K","Q","J","T"]
