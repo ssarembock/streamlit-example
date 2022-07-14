@@ -30,6 +30,7 @@ def get_results(current_hand):
     'background-color': 'grey',
     'font-size': '20pt',
   })
+  return results
 
   
   
