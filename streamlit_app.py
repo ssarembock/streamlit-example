@@ -24,7 +24,7 @@ card_2 = st.sidebar.radio("Pick Second Card",cards)
 
 suited = st.sidebar.radio("Suited",suits)
 
-current_hand = get_current_hand(card_1,card_2,is_suited)
+current_hand = get_current_hand(card_1,card_2,suited)
 
 """
 # {current_hand}
