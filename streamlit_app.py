@@ -24,6 +24,8 @@ def get_results(current_hand):
                current_hand in player4[2]]
   results["decisions"] = decisions
   results = results.groupby(["position","all_ins"])["decisions"].first().unstack()
+  results = results.sort_index(ascending=False)
+  results.index = ["First","Dealer","Small Blind","Big Blind"]
   return results
   
   
@@ -37,7 +39,7 @@ def get_current_hand(card1,card2,is_suited):
     return "".join(result)
 
 
-cards = [str(k) for k in range(2,10)] + ["A","K","Q","J","T"]
+cards = [str(k) for k in range(2,10)] + ["T","J","Q","K","A"]
 suits = ["o","s"]
 
 st.sidebar.title("All In Or Fold")
