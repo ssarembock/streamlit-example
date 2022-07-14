@@ -25,7 +25,8 @@ def get_results(current_hand):
   results["decisions"] = decisions
   results = results.groupby(["position","all_ins"])["decisions"].first().unstack()
   results = results.sort_index(ascending=False)
-  results.index = ["First","Dealer","Small Blind","Big Blind"]
+  results.index = ["Big Blind","Small Blind","Dealer","First"]
+  
   results.style.set_properties(**{
     'background-color': 'grey',
     'font-size': '20pt',
