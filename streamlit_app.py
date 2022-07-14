@@ -60,7 +60,7 @@ st.title(current_hand)
 
 results = get_results(current_hand)
 
-st.dataframe(results,results.style)
+st.dataframe(results)
 
 
 
