@@ -22,6 +22,7 @@ def get_results(current_hand):
                current_hand in player4[0],
                current_hand in player4[1],
                current_hand in player4[2]]
+  results["decisions"] = decisions
   results = results.groupby(["position","all_ins"])["decisions"].first().unstack()
   return results
   
