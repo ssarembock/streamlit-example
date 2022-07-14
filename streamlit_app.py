@@ -60,6 +60,8 @@ st.title(current_hand)
 
 results = get_results(current_hand)
 
+st.write("Number of All Ins")
+
 st.dataframe(results)
 
 
