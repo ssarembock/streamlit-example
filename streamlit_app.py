@@ -26,7 +26,12 @@ def get_results(current_hand):
   results = results.groupby(["position","all_ins"])["decisions"].first().unstack()
   results = results.sort_index(ascending=False)
   results.index = ["First","Dealer","Small Blind","Big Blind"]
-  return results
+  s = s = results.style.format('{:.0f}').hide([('Random', 'Tumour'), ('Random', 'Non-Tumour')], axis="columns")
+  s.set_table_styles([
+    {'selector': 'th.col_heading', 'props': 'text-align: center;'},
+    {'selector': 'th.col_heading.level0', 'props': 'font-size: 8em;'},
+    {'selector': 'td', 'props': 'text-align: center; font-weight: bold;'},
+  ], overwrite=False)
   
   
 
