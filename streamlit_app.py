@@ -10,6 +10,8 @@ def get_current_hand(card1,card2,is_suited):
     result = str(card1)+str(card2)+"o"
   else:
     result = sorted(str(card1) + str(card2) + str(is_suited))
+    
+   return result
 
 current_hand = None
 """
