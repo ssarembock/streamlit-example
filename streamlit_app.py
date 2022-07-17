@@ -23,7 +23,7 @@ def get_results(current_hand):
   result.columns = ["First","Dealer","Small","Big"]
   
 
-  return result[["First","Dealer"]][:2],result["Small"][2:6].sort_index(),result["Big"][7:].sort_index()
+  return result[["First","Dealer"]][:2],result["Small"][2:6].sort_index(),result["Big"][6:].sort_index()
 
   
   
